@@ -20,13 +20,21 @@
 </template>
 
 <script>
+import axios from "axios";
 export default {
   name: "App",
 
   components: {},
 
   data: () => ({
-    //
+    launches: [],
   }),
+  async created() {
+    const { data } = axios.get("https://api.spacexdata.com/v4/launches");
+
+    data.forEach(launch => {
+      this.launches.push(launch);
+    });
+  },
 };
 </script>
