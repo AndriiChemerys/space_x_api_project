@@ -1,15 +1,19 @@
 <template>
   <v-app>
-    <v-app-bar app color="primary" dark>
+    <!-- <v-app-bar app color="primary" dark>
       <div class="d-flex align-center">
         <h2>SpaceX Launches</h2>
       </div>
 
       <v-spacer></v-spacer>
-    </v-app-bar>
-
-    <v-content>
-      <v-container>
+    </v-app-bar> -->
+    <v-content class="hero-image">
+      <div class="d-flex align-center">
+        <h2>SpaceX Launches</h2>
+      </div>
+    </v-content>
+    <v-content >
+      <v-container >
         <v-timeline v-if="launches.length > 0">
           <LaunchTimeLineItem
             v-for="launch in launches"
@@ -44,3 +48,18 @@ export default {
   },
 };
 </script>
+<style>
+.hero-image {
+  background-image: url("img/SpaceX_img2.png");
+  /* width: 100%; */
+  /* width: 100vw; */
+  height: 100vh;
+  width: 100vw;
+  background-position: center;
+  /* background-repeat: no-repeat;  */
+  /* background-position: 0% 0%; */
+  background-size: cover;
+  background-repeat: no-repeat;
+  /* background-attachment: fixed; */
+}
+</style>
