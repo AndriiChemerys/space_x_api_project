@@ -8,8 +8,9 @@
       <v-spacer></v-spacer>
     </v-app-bar> -->
     <v-content class="hero-image">
-      <div class="d-flex align-center">
-        <h2>SpaceX Launches</h2>
+      <div class="center">
+        <h2>SpaceX Launches Timeline</h2>
+        <!-- <p>Launches Timeline</p> -->
       </div>
     </v-content>
     <v-content >
@@ -54,12 +55,27 @@ export default {
   /* width: 100%; */
   /* width: 100vw; */
   height: 100vh;
-  width: 100vw;
+  width: 100%;
   background-position: center;
   /* background-repeat: no-repeat;  */
   /* background-position: 0% 0%; */
-  background-size: cover;
+  background-size: contain;
   background-repeat: no-repeat;
-  /* background-attachment: fixed; */
+  background-attachment: fixed;
+}
+
+.center {
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  /* display: block; */
+}
+
+.child {
+  display: block;
 }
 </style>
