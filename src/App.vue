@@ -14,6 +14,9 @@
         <p>History:</p>
       </div>
     </v-content>
+    <v-content>
+      <SpacexCarousel/>
+    </v-content>
     <v-content >
       <v-container >
         <v-timeline v-if="launches.length > 0">
@@ -31,10 +34,13 @@
 <script>
 import axios from "axios";
 import LaunchTimeLineItem from "./components/LaunchTimeLineItem";
+import SpacexCarousel from "./components/SpacexCarousel";
+
 export default {
   name: "App",
   components: {
     LaunchTimeLineItem,
+    SpacexCarousel,
   },
   data: () => ({
     launches: [],
